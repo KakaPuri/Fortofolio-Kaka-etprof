@@ -105,7 +105,7 @@ export function SkillsSection() {
             english="Skills"
             local={<span className="text-white">Keahlian & Alat</span>}
             description="Core tools and technologies arranged in a clean orbital layout"
-            accent="primary"
+            accent="blue"
           />
         </RevealOnScroll>
 
