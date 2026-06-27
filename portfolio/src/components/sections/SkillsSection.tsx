@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { motion } from "framer-motion";
-import { Code2, Figma, Wrench } from "lucide-react";
+import { Figma, Wrench } from "lucide-react";
 import { RevealOnScroll } from "@/components/common/RevealOnScroll";
 import SectionTitle from "@/components/ui/SectionTitle";
 

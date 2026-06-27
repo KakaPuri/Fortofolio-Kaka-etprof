@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { type LucideIcon, Palette, Users, Layout, Zap, GraduationCap, MapPin, Download } from "lucide-react";
+import { type LucideIcon, Palette, Users, Layout, Zap, MapPin, Download } from "lucide-react";
 import { RevealOnScroll } from "@/components/common/RevealOnScroll";
 import SectionTitle from "@/components/ui/SectionTitle";
 import { personalInfo, aboutHighlights } from "@/data/portfolio";
