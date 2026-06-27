@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { type LucideIcon, Palette, Users, Layout, Zap, MapPin, Download } from "lucide-react";
 import { RevealOnScroll } from "@/components/common/RevealOnScroll";
@@ -56,11 +57,12 @@ export function AboutSection() {
               style={{ background: "rgba(9, 14, 28, 0.92)", border: "1px solid rgba(255,255,255,0.08)" }}
             >
               <div className="flex flex-col gap-8 lg:flex-row lg:items-start text-center sm:text-left">
-                <div className="relative overflow-hidden rounded-[28px] border border-[rgba(255,255,255,0.08)] bg-[rgba(255,255,255,0.04)] shadow-lg w-full max-w-[320px] mx-auto lg:mx-0">
-                  <img
+                <div className="relative overflow-hidden rounded-[28px] border border-[rgba(255,255,255,0.08)] bg-[rgba(255,255,255,0.04)] shadow-lg w-full max-w-[320px] mx-auto lg:mx-0 h-[360px] sm:h-[420px] lg:h-full">
+                  <Image
                     src="/images/profile.jpg"
                     alt="Profile Kaka Puri"
-                    className="h-auto w-full object-cover"
+                    fill
+                    className="object-cover"
                   />
                 </div>
                 <div className="space-y-6 lg:max-w-[640px] mx-auto lg:mx-0">
