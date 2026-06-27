@@ -46,22 +46,25 @@ function OrbitSkillItem({
       viewport={{ once: true, amount: 0.4 }}
       transition={{ duration: 0.6, delay }}
       animate={{ y: [0, -6, 0] }}
-      whileHover={{ scale: 1.1, y: -4, boxShadow: "0 0 24px rgba(95,111,143,0.24)" }}
+      whileHover={{ scale: 1.08, y: -4, boxShadow: "0 0 22px rgba(95,111,143,0.24)" }}
       className="absolute flex w-24 flex-col items-center gap-2 text-center sm:w-28"
       style={{
         left: `calc(50% + ${x}px)`,
         top: `calc(50% + ${y}px)`,
         transform: "translate(-50%, -50%)",
-        minWidth: "96px",
       }}
     >
       <div className="flex h-14 w-14 items-center justify-center rounded-full border border-white/10 bg-[rgba(255,255,255,0.12)] backdrop-blur-xl shadow-[0_12px_32px_rgba(0,0,0,0.22)] transition-all duration-300 hover:border-white/25 sm:h-16 sm:w-16">
-        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(95,111,143,0.28)] text-white sm:h-11 sm:w-11">
+        <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[rgba(95,111,143,0.28)] text-white sm:h-12 sm:w-12">
           {skill.icon}
         </div>
       </div>
-      <p className="text-[10px] font-medium uppercase tracking-[0.28em] text-[var(--text-secondary)] sm:text-[11px]">
-        {skill.name}
+      <p className="max-w-[110px] text-[10px] font-semibold uppercase tracking-[0.24em] leading-4 text-[var(--text-secondary)] sm:text-[11px]">
+        {skill.name.split(" ").map((word, index) => (
+          <span key={index} className="block">
+            {word}
+          </span>
+        ))}
       </p>
     </motion.div>
   );
@@ -94,7 +97,7 @@ export function SkillsSection() {
 
   const radius = useMemo(() => {
     if (viewport === "mobile") return 0;
-    return orbitContainerSize * 0.48;
+    return orbitContainerSize * 0.42;
   }, [viewport, orbitContainerSize]);
 
   return (

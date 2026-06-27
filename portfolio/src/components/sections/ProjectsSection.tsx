@@ -296,14 +296,6 @@ export function ProjectsSection() {
           </p>
         )}
 
-        {/* Bottom label */}
-        <RevealOnScroll delay={0.2}>
-          <div className="text-center mt-12">
-            <p className="text-xs text-[#555555]">
-              Proyek lainnya sedang dikerjakan • Saat ini menempuh studi di Universitas Maritim Raja Ali Haji
-            </p>
-          </div>
-        </RevealOnScroll>
       </div>
 
       {/* Modal */}

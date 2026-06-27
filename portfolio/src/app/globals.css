@@ -28,13 +28,22 @@
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: var(--background);
+    color: var(--text-primary);
+  }
+
+  body,
+  #__next,
+  main {
+    @apply bg-background text-[var(--text-primary)];
+    background-color: var(--background) !important;
+    background: var(--background);
+    color: var(--text-primary);
+    min-height: 100vh;
   }
 
   body {
-    @apply bg-background text-[var(--text-primary)];
-    background: var(--background);
     overflow-x: hidden;
-    color: var(--text-primary);
   }
 
   ::selection {
